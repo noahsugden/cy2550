@@ -1,0 +1,19 @@
+# Last Modified: Mon Jun 14 17:42:42 2021
+abi <abi/3.0>,
+include <tunables/global>
+/home/noahsugden/p2 {
+  #include <abstractions/base>
+  #include <abstractions/user-tmp>
+  /var/log/syslog r,
+  /etc/timezone r,
+  /proc/uptime r,
+  /etc/hostid r,
+  /etc/passwd r,
+  /etc/hosts r,
+  /home/noahsugden/template r,
+  network tcp,
+  /home/noahsugden/p2 mr,
+  /sys/kernel/mm/transparent_hugepage/hpage_pmd_size r,
+  @{HOME}/ r,
+  owner /home/*/.project2/config w,
+}
